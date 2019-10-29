@@ -48,7 +48,7 @@ public class BinaryToDecimalChecker {
         String valueString = "" + value;
         int valueLength = valueString.length();
         for(int x = 0; x<valueLength ;x++){
-           String latter = valueString.charAt(x);
+           //String latter = valueString.charAt(x);
 
         }
 

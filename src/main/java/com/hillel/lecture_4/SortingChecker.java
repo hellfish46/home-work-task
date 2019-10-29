@@ -11,7 +11,23 @@ public class SortingChecker {
     public int[] fromMinToMax(int[] values) {
 
 //        TODO implements result
-        int[] result = new int[0];
+        int[] result = new int[values.length];
+
+        for(int j = 0; j < result.length; j++){
+            result[j]=values[j];
+        }
+        int count;
+        do {
+            count = 0;
+            for (int i = 0; i < result.length - 1; i++) {
+                if (result[i] > result[i + 1]) {
+                    int temp = result[i];
+                    result[i] = result[i + 1];
+                    result[i + 1] = temp;
+                    count++;
+                }
+            }
+        } while (count > 0);
 
         return result;
     }
@@ -20,7 +36,23 @@ public class SortingChecker {
     public int[] fromMaxToMin(int[] values) {
 
 //        TODO implements result
-        int[] result = new int[0];
+        int[] result = new int[values.length];
+
+        for(int j = 0; j < result.length; j++){
+            result[j]=values[j];
+        }
+        int count;
+        do {
+            count = 0;
+            for (int i = 0; i < result.length - 1; i++) {
+                if (result[i] < result[i + 1]) {
+                    int temp = result[i];
+                    result[i] = result[i + 1];
+                    result[i + 1] = temp;
+                    count++;
+                }
+            }
+        } while (count > 0);
 
         return result;
     }
