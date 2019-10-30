@@ -46,11 +46,7 @@ public class BinaryToDecimalChecker {
 //        TODO implements result
         int result = 0;
         String valueString = "" + value;
-        int valueLength = valueString.length();
-        for(int x = 0; x<valueLength ;x++){
-           //String latter = valueString.charAt(x);
-
-        }
+        result = Integer.parseInt(valueString, 2);
 
         return result;
     }
