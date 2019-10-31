@@ -12,6 +12,28 @@ public class QuadraticEquationChecker {
 //        TODO implements result
         String result = "";
 
+        double di = b*b - 4*a*c;
+
+
+        if (a == 0) {
+            result = "The 'a' coefficient should not be zero!";
+            return result;
+        } else if (di < 0){
+            result = "No roots on the set of real numbers!";
+            return result;
+        } else if (di > 0){
+            double xOne = (-b + Math.sqrt(di)) / 2 * a;
+            double xTwo = (-b - Math.sqrt(di)) / 2 * a;
+            result = "Discriminant: " + di + ", x1: " + xOne + ", x2: " + xTwo; // Discriminant: 17.0, x1: -0.4384471871911697, x2: -4.561552812808831
+            return result;
+        } else if (di == 0){
+            double xOne = (-b + Math.sqrt(di)) / 2 * a;
+            result = "Two real, identical roots: [x1 && x2] = " + xOne;
+            return result;
+        }
+
+
+
         return result;
     }
 

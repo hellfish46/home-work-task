@@ -11,7 +11,18 @@ public class DiscountCountChecker {
     public double checkDiscountCount(double price) {
 
 //        TODO implements result
+
         double result = 0.0;
+
+        if (price > 1000){
+            result = price - (price*15/100);
+            System.out.println("Your price is " + result + " included discount =)");
+        } else {
+            System.out.println("Discount isn't provided !" );
+        }
+
+
+
 
         return result;
     }
