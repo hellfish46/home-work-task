@@ -13,6 +13,7 @@ public class UpperLowerCaseChecker {
 
 //        TODO implements result
         String result = "";
+        result = word.toUpperCase();
 
         return result;
     }
@@ -22,6 +23,7 @@ public class UpperLowerCaseChecker {
 
 //        TODO implements result
         String result = "";
+        result = word.toLowerCase();
 
         return result;
     }
@@ -32,15 +34,50 @@ public class UpperLowerCaseChecker {
 //        TODO implements result
         String result = "";
 
+        String[] arrayString = sentence.split("\\.");
+        System.out.println(arrayString.length);
+        for (int i = 0; i < arrayString.length; i++) {
+            arrayString[i] = arrayString[i].trim();
+            arrayString[i] = arrayString[i].substring(0,1).toUpperCase() + arrayString[i].substring(1);
+            //System.out.println( i + " " + arrayString[i]);
+           // result = result + arrayString[i] + ". ";
+
+            /*if (i == 0){
+                result = result + " " + arrayString[i];
+            } else {
+                result = result + ". " + arrayString[i];
+            }*/
+        }
+        result = String.join(". ", arrayString);
+        if(sentence.charAt(sentence.length()-1) == '.'){
+            result = result + ".";
+        }
+        result = result.trim();
+
+
         return result;
     }
 
     @Step
     public String eachLetterToUpperCase(String sentence) {
+       String result = "";
+        String[] arrayString = sentence.split(" ");
 
-//        TODO implements result
-        String result = "";
+        for (int i = 0; i < arrayString.length; i++) {
+            //arrayString[i] = arrayString[i].fi
+            arrayString[i] = arrayString[i].substring(0,1).toUpperCase() + arrayString[i].substring(1);
+            System.out.println( i + " " + arrayString[i]);
+            result = result + " " + arrayString[i];
+
+
+
+        }
+        //String result = arrayString.toString();
+        result = result.trim();
+
 
         return result;
+
+
     }
 }

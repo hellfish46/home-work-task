@@ -12,7 +12,17 @@ public class SquareWordPatternChecker {
     public String applySquareWordPattern(String word) {
 
 //        TODO implements result
-        String result = "";
+        String result = word;// word, ordw,
+
+        String temp2 = word;
+
+
+        for (int i = 1; i < word.length(); i++) {
+            temp2 = temp2.substring(1) + temp2.charAt(0);
+            result = result + ", " + temp2;
+
+
+        }
 
         return result;
     }

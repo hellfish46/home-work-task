@@ -31,7 +31,7 @@ public class DistanceConverter {
     @Step
     public double kilometresToMiles(double kilometres) {
 //        TODO implements result
-        double result = kilometres * 0.62150403977;
+        double result = kilometres / 1.609;
         return result;
     }
 }

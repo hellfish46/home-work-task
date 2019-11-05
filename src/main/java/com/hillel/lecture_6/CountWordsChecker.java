@@ -12,6 +12,8 @@ public class CountWordsChecker {
 
 //        TODO implements result
         int result = 0;
+        String[] wordsArray = sentence.split(" ");
+        result = wordsArray.length;
 
         return result;
     }
