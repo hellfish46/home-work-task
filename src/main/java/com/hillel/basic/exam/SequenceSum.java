@@ -25,6 +25,22 @@ package com.hillel.basic.exam;
 public class SequenceSum {
 
     public static String showSequence(int value) {
-        return null;
+        //{ 10, "0+1+2+3+4+5+6+7+8+9+10 = 55"}
+        String result ="";
+        int[] valueArr = new int[value+1];
+        for (int i = 0; i < valueArr.length; i++) {
+            valueArr[i] = i;
+        }
+        int summ = 0;
+        for (int j = 0; j < valueArr.length; j++) {
+            result = result + j + "+";
+
+            summ = summ + valueArr[j];
+        }
+        result = result.substring(0, result.length()-1);
+        result = result + " = " + summ;
+        return result;
+
+
     }
 }

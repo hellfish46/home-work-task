@@ -20,8 +20,6 @@ public class SquareWordPatternChecker {
         for (int i = 1; i < word.length(); i++) {
             temp2 = temp2.substring(1) + temp2.charAt(0);
             result = result + ", " + temp2;
-
-
         }
 
         return result;

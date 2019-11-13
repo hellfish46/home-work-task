@@ -18,6 +18,40 @@ package com.hillel.basic.exam;
 public class NumberRotator {
 
     public static long rotate(long n) {
-        return 0;
+        String numberString = n+"";
+        //char[] numberArr = numberString.toCharArray();
+        long result = n;
+
+        //char temp ;
+       // String temp2;
+        for (int i = 0; i < numberString.length()-1; i++) {
+            if(i == 0) {
+                char temp = numberString.charAt(i);
+                //  temp = numberString.charAt(i);
+                String substring = numberString.substring(i + 1);
+                String newString = substring + temp;
+                numberString = newString;
+                System.out.println(newString);
+                long toCompare = Long.parseLong(newString);
+
+                if (result < toCompare) {
+                    result = toCompare;
+                }
+            } else {
+                char temp = numberString.charAt(i);
+                String newString = numberString.substring(0,i) + numberString.substring(i+1) + temp;
+                numberString = newString;
+                System.out.println(newString);
+                long toCompare = Long.parseLong(newString);
+                if (result < toCompare) {
+                    result = toCompare;
+                }
+
+
+            }
+
+        }
+        return result;
+
     }
 }

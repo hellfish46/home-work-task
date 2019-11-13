@@ -34,25 +34,21 @@ public class UpperLowerCaseChecker {
 //        TODO implements result
         String result = "";
 
-        String[] arrayString = sentence.split("\\.");
+        String[] arrayString = sentence.split("\\."); // разбил строку на массив по разделителю ТОЧКА
         System.out.println(arrayString.length);
-        for (int i = 0; i < arrayString.length; i++) {
-            arrayString[i] = arrayString[i].trim();
+        for (int i = 0; i < arrayString.length; i++) { //создал цикл, каждый элемент массива - 1 предложение
+            arrayString[i] = arrayString[i].trim(); // обрезал пробелы с начала предложения и в конце
+            // Беру 1ю букву 1го элемента массив (1 предложение) и делаю букву заглавной. + прибавляю остаток предложения
             arrayString[i] = arrayString[i].substring(0,1).toUpperCase() + arrayString[i].substring(1);
-            //System.out.println( i + " " + arrayString[i]);
-           // result = result + arrayString[i] + ". ";
-
-            /*if (i == 0){
-                result = result + " " + arrayString[i];
-            } else {
-                result = result + ". " + arrayString[i];
-            }*/
+           //2й цикл сделает тоже только со вторым предложением
         }
-        result = String.join(". ", arrayString);
+        result = String.join(". ", arrayString);// Склеиваю массив в 1 строку с разделителем ". "
+        // условие - если в исходная строка заканчивалась точкой - то добавить точку в наш результат
         if(sentence.charAt(sentence.length()-1) == '.'){
+
             result = result + ".";
         }
-        result = result.trim();
+        result = result.trim();// обрезаю в нашем результате пробелы (если они есть)
 
 
         return result;
