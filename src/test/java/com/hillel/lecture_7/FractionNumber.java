@@ -32,16 +32,24 @@ public class FractionNumber {
 
     }
     // activities
-    public double plus(){
+    public double plus(double first, double second){
+        this.firstNumber = first;
+        this.secondNumber = second;
         return this.firstNumber + this.secondNumber;
     };
-    public double minus(){
+    public double minus(double first, double second){
+        this.firstNumber = first;
+        this.secondNumber = second;
         return this.firstNumber - this.secondNumber;
     }
-    public double multiple(){
+    public double multiple(double first, double second){
+        this.firstNumber = first;
+        this.secondNumber = second;
         return this.firstNumber * this.secondNumber;
     }
-    public double divide(){
+    public double divide(double first, double second){
+        this.firstNumber = first;
+        this.secondNumber = second;
         return this.firstNumber / this.secondNumber;
     }
 
