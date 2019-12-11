@@ -98,4 +98,20 @@ public class User {
     public void setFriends(List<Friend> friends) {
         this.friends = friends;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"id\":" + id + "," +
+                "\"firstName\":\"" + firstName + "\"," +
+                "\"lastName\":\"" + lastName + "\"," +
+                "\"age\":" + age + "," +
+                "\"gender\":\"" + gender + "\"," +
+                "\"company\":\"" + company + "\"," +
+                "\"email\":\"" + email + "\"," +
+                "\"phone\":" + phone.toString().replaceAll("\\+", "\"+").replaceAll("]", "\"]").replaceAll(",", "\",").replaceAll(", ", ",") + "," +
+                "\"address\":" + address + "," +
+                "\"friends\":" + friends.toString().replaceAll(", ", ",") +
+                "}";
+    }
 }
